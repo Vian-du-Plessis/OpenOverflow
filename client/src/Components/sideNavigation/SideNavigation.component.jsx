@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import axios from 'axios';
 
 /* Styling */
 import styles from "./SideNavigation.module.scss";
