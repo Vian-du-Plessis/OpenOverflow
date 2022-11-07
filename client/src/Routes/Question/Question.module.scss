@@ -1,0 +1,40 @@
+@import "../../StyleSource/variables.scss";
+
+.container {
+    display: flex;
+    flex: 1;
+
+    .center{
+        padding: 0 auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        // max-width: 900px;
+        // background-color: red;
+    }
+
+    .comments{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .answers {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .postAnswer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

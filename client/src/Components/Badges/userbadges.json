@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Murmurer",
+        "badgeImage": "level1.svg",
+        "badgeDescription": "Post and/or answer at least 5 tickets."
+    },
+    {
+        "title": "Mumbler",
+        "badgeImage": "level2.svg",
+        "badgeDescription": "Post and/or answer at least 10 tickets."
+    },
+    {
+        "title": "Whisperer",
+        "badgeImage": "level3.svg",
+        "badgeDescription": "Post and/or answer at least 12 tickets."
+    },
+    {
+        "title": "Chatterer",
+        "badgeImage": "level4.svg",
+        "badgeDescription": "Post and/or answer at least 20 tickets."
+    },
+    {
+        "title": "Chatterbox",
+        "badgeImage": "level5.svg",
+        "badgeDescription": "Post and/or answer at least 25 tickets."
+    },
+    {
+        "title": "Loud Mouth",
+        "badgeImage": "level6.svg",
+        "badgeDescription": "Post and/or answer at least 35 tickets."
+    },
+    {
+        "title": "Screamer",
+        "badgeImage": "level7.svg",
+        "badgeDescription": "Post and/or answer at least 40 tickets."
+    },
+    {
+        "title": "Know-it-all",
+        "badgeImage": "level8.svg",
+        "badgeDescription": "Post and/or answer at least 50 tickets."
+    },
+    {
+        "title": "Response Guru",
+        "badgeImage": "level9.svg",
+        "badgeDescription": "Post and/or answer at least 70 tickets."
+    },
+    {
+        "title": "Phone App Slinger",
+        "badgeImage": "badgephoneapp.svg",
+        "badgeDescription": "Solve any 10 iOS, Android, Kotlin, XML, Swift or any other phone app related tickets."
+    },
+    {
+        "title": "Book-Bot",
+        "badgeImage": "badgestudybot.svg",
+        "badgeDescription": "Resolve at least 50 tickets."
+    },
+    {
+        "title": "Wireframer",
+        "badgeImage": "badgewireframe.svg",
+        "badgeDescription": "Correct 25 CSS, SCSS or any other layout/style related tickets."
+    }
+]

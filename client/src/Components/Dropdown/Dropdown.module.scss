@@ -1,0 +1,48 @@
+@import "../../StyleSource/variables.scss";
+
+.container {
+    @include dropShadow();
+    border: 1px solid $orange;
+    background-color: $white;
+    min-width: 300px;
+    max-width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    z-index: +99;
+    max-height: 300px;
+    overflow: scroll;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    &__top {
+        display: flex;
+        justify-content: center;
+        background-color: $orange;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+
+        h5 {
+            color: $white;
+        }
+    }
+
+    &__notifications {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+}

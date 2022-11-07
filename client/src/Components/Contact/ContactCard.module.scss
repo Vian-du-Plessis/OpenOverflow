@@ -1,0 +1,57 @@
+@import "../../StyleSource/variables.scss";
+
+.container {
+    p {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 1000;
+        margin-top: 20px;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    width: 120px;
+    height: 120px;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* .image {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    
+} */
+
+.name{
+    @include headingSix();
+    font-weight: bold;
+    text-align: center
+}
+.address{
+    @include smallText();
+    margin-bottom: 10px;
+}
+
+#email-btn {
+    background-color: black;
+    margin-left: 70px;
+}

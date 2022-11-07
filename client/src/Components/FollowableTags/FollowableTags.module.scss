@@ -1,0 +1,33 @@
+@import "../../StyleSource/variables.scss";
+
+.container{
+    @include dropShadow();
+    height: fit-content;
+    min-height: 220px;
+    max-width: 350px;
+    background-color: white;
+    border: 1px solid $grey;
+    padding: 10px;
+    margin-bottom: 10px;
+    flex-basis: 40%;
+    min-width: 250px;
+
+    .tag {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 15px;
+        @include body();
+        justify-content: space-between;
+    }
+
+    .informationContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        
+        p {
+            @include body();
+        }
+    }
+}

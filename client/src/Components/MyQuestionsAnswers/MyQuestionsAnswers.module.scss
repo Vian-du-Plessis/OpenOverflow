@@ -1,0 +1,34 @@
+@import "../../StyleSource/variables.scss";
+
+.container {
+    @include dropShadow();
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    height: fit-content;
+    background-color: $white;
+    border: 1px solid rgba($color: $black, $alpha: 0.1);
+    padding: 15px;
+    max-width: 400px;
+    
+    .tagsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .informationContainer {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    
+        .information {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }  
+    }
+}

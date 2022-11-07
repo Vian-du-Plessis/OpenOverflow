@@ -1,0 +1,36 @@
+@import "../../StyleSource/variables.scss";
+
+.container {
+    @include dropShadow();
+    display: flex;
+    height: fit-content;
+    border: 1px solid rgba($color: $black, $alpha: 0.1);
+    padding: 20px 15px;
+    align-items: center;
+    gap: 20px;
+
+    h3 {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    h5 {
+        font-size: 25px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    
+    p {
+        max-width: 800px;
+        @include headingFour();
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}

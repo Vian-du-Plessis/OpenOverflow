@@ -1,0 +1,205 @@
+// Colours to be used
+$white: rgb(255, 255, 255);
+$orange: #FF3F00;
+$black: #000000;
+$grey: #e5e3e3;
+$discord: #5865F2;
+// Semantic Colors 
+$danger: #DE0000;
+$success: #00B112;
+$warning: #F5DD00;
+
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$headings: 'Montserrat', sans-serif;
+$body: 'Quicksand', sans-serif;
+
+html,
+body {
+    height: 100%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: $grey;
+    border-radius: 20px;
+    /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+}
+
+/* Styling Properties for everything */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    ul,
+    li,
+    a {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style-type: none;
+        color: $black;
+    }
+}
+
+/* Styling for App.js */
+.App {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    width: fit-content;
+    height: fit-content;
+}
+
+@mixin headingOne {
+    font-family: $headings;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+@mixin Title {
+    font-family: $headings;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+@mixin headingTwo {
+    font-family: $headings;
+    font-size: 32px;
+    color: $black;
+}
+
+@mixin headingThree {
+    font-family: $headings;
+    font-size: 28px;
+    color: $black;
+}
+
+@mixin headingFour {
+    font-family: $headings;
+    font-size: 22px;
+    color: $black;
+}
+
+@mixin headingFive {
+    font-family: $headings;
+    font-size: 18px;
+    color: $black;
+}
+
+@mixin headingSix {
+    font-family: $headings;
+    font-size: 15px;
+    color: $black;
+}
+
+h1 {
+    @include headingOne();
+}
+
+h2 {
+    @include headingTwo();
+}
+
+h3 {
+    @include headingThree();
+}
+
+h4 {
+    @include headingFour();
+}
+
+h5 {
+    @include headingFive();
+}
+
+h6 {
+    @include headingSix();
+}
+
+@mixin body {
+    font-family: $body;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+@mixin smallText {
+    font-family: $body;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+@mixin dropShadow {
+    box-shadow: 7px 7px 20px -1px rgba(0, 0, 0, 0.10);
+    -webkit-box-shadow: 7px 7px 20px -1px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 7px 7px 20px -1px rgba(0, 0, 0, 0.10);
+}
+
+//Input animation
+
+@mixin shrinkLabel {
+    top: -10px;
+    font-size: 12px;
+    color: $black;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for App.js */
+.App {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+.slide-enter,
+.slide-exit {
+    transition: transform 600ms ease-out;
+}
+
+.slide-enter {
+    transform: translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+    transform: translateX(0%);
+}
+
+.slide-exit {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    transform: translateX(0%);
+    left: 0;
+    transform: translateX(0%);
+}
+
+.slide-exit-active {
+    transform: translateX(-100%);
+}

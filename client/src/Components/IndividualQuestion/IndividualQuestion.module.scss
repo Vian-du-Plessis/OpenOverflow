@@ -1,0 +1,93 @@
+@import "../../StyleSource/variables.scss";
+
+.container {
+    width: 85%;
+    display: flex;
+    padding: 20px 0px;
+    gap: 30px;
+    height: fit-content;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+
+    pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+        
+    .inner{
+        display: flex;
+        width: 100%;
+        gap: 15px;
+
+        .voting {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+            height: fit-content;
+    
+            & :nth-child(3) {
+                transform: rotate(180deg);
+            }
+
+            .upVote {
+                svg {
+                    *[fill] {
+                        fill: $orange;
+                    }
+                }
+            }
+
+            .downVote {
+                svg {
+                    *[fill] {
+                        fill: $orange;
+                    }
+                }
+            }
+        }
+
+        .question {
+            .description {
+                @include body();
+                margin-top: 10px;
+                width: 100%
+            }
+      
+
+
+    
+            .userInformation {
+                @include smallText();
+                color: #B1ACAC;
+            }
+        }
+    }
+
+    .code{
+        width: 100%;
+        margin-bottom: 20px;
+        height: fit-content;
+    }
+
+    .imageContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+}

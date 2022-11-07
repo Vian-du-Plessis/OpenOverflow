@@ -1,0 +1,22 @@
+@import "../../StyleSource/variables.scss";
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    // min-width: 40px;
+    padding: 10px 10px;
+    background-color: $grey;
+    @include smallText();
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: $danger;
+        transform: scale(1.1);
+        @include dropShadow();  
+        color: $white;
+    }
+}

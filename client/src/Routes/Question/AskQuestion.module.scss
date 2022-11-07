@@ -1,0 +1,145 @@
+@import '../../StyleSource/variables.scss';
+
+.container {
+    display: flex;
+    flex: 1;
+
+    .content {
+        flex: 1;
+        padding: 20px ;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid $orange;
+         
+    
+                &:focus {
+                    outline: none;
+                    border: 1px solid $orange;
+                }
+            }
+
+            textarea {
+                padding: 12px;
+                min-width: 100%;
+                min-height: 350px;
+                resize: vertical;
+                border: 1px solid $orange;
+
+                &:focus {
+                    border:  1px solid $orange;
+                    outline: none;
+                }
+            }
+            .questionText{
+                @include smallText()
+            }
+
+            .tags {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .searchTag {
+                .searchedTags {
+                    position: absolute;
+                    padding: 15px;
+                    width: fit-content;
+                    background-color: $grey;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    z-index: 99999;
+
+                    h6 {
+                        border-bottom: 1px solid $black;
+
+                        &:hover {
+                            cursor: pointer;
+                            border-bottom: 1px solid $orange;
+                        }
+                    }
+                }
+            }
+
+
+
+            // #uploadbtnwrapper{
+
+            // }
+
+            #uploadbtnwrapper {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+
+                input[type=file] {
+                    font-size: 10px;
+                    position: absolute;
+                    left: 0;
+                    border: none;    
+                    left: 0;
+                    opacity: 0;                    
+                  }
+
+              }
+        }
+        .preview {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .tags {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .question {
+                p {
+                    @include body();
+                }
+            }
+
+            .imageContainer{
+                display: flex;
+                width: 100%;
+                // background-color: red;
+                height: fit-content;
+                // max-height: 300px;
+        
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+        
+            }
+
+            .code {
+                border: 1px solid $orange;
+            
+                pre {
+                    width: 100%;
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+    }
+}

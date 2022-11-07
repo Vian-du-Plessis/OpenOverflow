@@ -1,0 +1,91 @@
+@import "../../StyleSource/variables.scss";
+
+.container {
+    @include body();
+    // max-width: 800px;
+    background-color: $white;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 5px;
+    border-bottom: 1px solid $black;
+    padding: 5px 0;
+
+    .left {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+
+        .norm {
+            svg {
+
+                transition: ease-in-out 0.3s all;
+
+                *[fill] {
+                    fill: $orange;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+
+                    *[fill] {
+                        fill: $orange;
+                    }
+                }
+            }
+
+            & .flagged {
+                *[fill] {
+                    fill: $black;
+                }
+
+                svg {
+
+                    transition: ease-in-out 0.3s all;
+
+                    *[fill] {
+                        fill: $black
+                    }
+
+                    &:hover {
+                        transform: scale(1.2);
+
+                        *[fill] {
+                            fill: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .name {
+        @include headingFive();
+    }
+
+    .time {
+        @include smallText();
+        color: darken($grey, 30%);
+    }
+
+    .comment {
+        margin-top: 10px;
+
+    }
+
+    @media only screen and (max-width: 780px) {
+        .left {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import "../../StyleSource/variables.scss";
+
+.centerContent{
+    padding-top: 4vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+
+    &__content {
+        padding: 30px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        &__cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
+    .contacts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__rightContent {
+        padding: 10px;
+        min-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
