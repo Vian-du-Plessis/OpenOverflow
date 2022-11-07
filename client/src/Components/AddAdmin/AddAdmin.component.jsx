@@ -88,7 +88,7 @@ const AddAdmin = () => {
                         password: formValues["password"].trim(),
                     };
 
-                    axios.post('http://localhost:5001/api/addAmin', payload)
+                    axios.post('/api/addAmin', payload)
                     .then(res =>{
                             setOpenModal(true)
                             setFormValues(defaultValues)
@@ -120,7 +120,7 @@ const AddAdmin = () => {
                     };
 
 
-                    axios.post('http://localhost:5001/api/addAmin', payload)
+                    axios.post('/api/addAmin', payload)
                     .then(res =>{
                             setOpenModal(true)
                     })

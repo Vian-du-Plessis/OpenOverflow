@@ -91,7 +91,7 @@ const Question = () => {
         let user = sessionStorage.getItem('currentUser')
         setUserId(user)
 
-        axios.get('http://localhost:5001/api/question/' + questionId.questionId)
+        axios.get('/api/question/' + questionId.questionId)
             .then(res => {
                 if (res.data.votes.up.includes(user)) {
                     setDidUpVote(true);
@@ -104,7 +104,7 @@ const Question = () => {
                 setQuestionData(res.data);
 
                 let tags = res.data.tags
-                axios.get(`http://localhost:5001/api/getsimiliar/${tags[0]}/${questionId.questionId}`)
+                axios.get(`/api/getsimiliar/${tags[0]}/${questionId.questionId}`)
                     .then(res => {
                         setSimiliar(res.data)
                         setBusy(false)
@@ -124,7 +124,7 @@ const Question = () => {
             if (formValues.answer === '' || formValues.code == '') {
                 console.log('please fill out answer')
             } else {
-                axios.patch(`http://localhost:5001/api/question/answer/${userId}/${questionId.questionId}`, formValues)
+                axios.patch(`/api/question/answer/${userId}/${questionId.questionId}`, formValues)
                     .then(res => {
                         if (res.data) {
                             setRerender(true)
@@ -155,7 +155,7 @@ const Question = () => {
                 Images: newImage
             }
 
-            axios.patch(`http://localhost:5001/api/question/answer/${userId}/${questionId.questionId}`, data)
+            axios.patch(`/api/question/answer/${userId}/${questionId.questionId}`, data)
                 .then(res => {
                     if (res.data) {
                         setRerender(true)
@@ -193,7 +193,7 @@ const Question = () => {
             user: val,
             comment: commentVal.comments
         }
-        axios.patch(`http://localhost:5001/api/addComment/${questionId.questionId}`, payload)
+        axios.patch(`/api/addComment/${questionId.questionId}`, payload)
             .then(res => {
                 if (res.data.state) {
                     setRerender(true)
@@ -234,7 +234,7 @@ const Question = () => {
                     downVotes: newDownVotes
                 }
 
-                axios.patch('http://localhost:5001/api/questionVote/up', data)
+                axios.patch('/api/questionVote/up', data)
                     .then(res => {
                         if (res.data) {
                             setRerender(true);
@@ -254,7 +254,7 @@ const Question = () => {
                     downVotes: downVotes
                 }
 
-                axios.patch('http://localhost:5001/api/questionVote/up', data)
+                axios.patch('/api/questionVote/up', data)
                     .then(res => {
                         if (res.data) {
                             setRerender(true);
@@ -281,7 +281,7 @@ const Question = () => {
                     downVotes: downVotes
                 }
 
-                axios.patch('http://localhost:5001/api/questionVote/down', data)
+                axios.patch('/api/questionVote/down', data)
                     .then(res => {
                         if (res.data) {
                             setRerender(true);
@@ -301,7 +301,7 @@ const Question = () => {
                     downVotes: votes
                 }
 
-                axios.patch('http://localhost:5001/api/questionVote/down', data)
+                axios.patch('/api/questionVote/down', data)
                     .then(res => {
                         if (res.data) {
                             setRerender(true);
@@ -329,7 +329,7 @@ const Question = () => {
                     downVotes: newDownVotes
                 }
 
-                axios.patch('http://localhost:5001/api/answerVote/up', data)
+                axios.patch('/api/answerVote/up', data)
                     .then(res => {
                         if (res.data) {
                             setRerender(true);
@@ -350,7 +350,7 @@ const Question = () => {
                     downVotes: downVotes
                 }
 
-                axios.patch('http://localhost:5001/api/answerVote/up', data)
+                axios.patch('/api/answerVote/up', data)
                     .then(res => {
                         if (res.data) {
                             setRerender(true);
@@ -378,7 +378,7 @@ const Question = () => {
                     downVotes: downVotes
                 }
 
-                axios.patch('http://localhost:5001/api/answerVote/down', data)
+                axios.patch('/api/answerVote/down', data)
                     .then(res => {
                         if (res.data) {
                             setRerender(true);
@@ -399,7 +399,7 @@ const Question = () => {
                     downVotes: votes
                 }
 
-                axios.patch('http://localhost:5001/api/answerVote/down', data)
+                axios.patch('/api/answerVote/down', data)
                     .then(res => {
                         if (res.data) {
                             setRerender(true);
@@ -423,7 +423,7 @@ const Question = () => {
                 flagged: newFlags.length < 1 ? false : true
             }
 
-            axios.patch('http://localhost:5001/api/flagComment', data)
+            axios.patch('/api/flagComment', data)
                 .then(res => {
                     if (res.data) {
                         setRerender(true);
@@ -443,7 +443,7 @@ const Question = () => {
                 flagged: flagsArr.length < 1 ? false : true
             }
 
-            axios.patch('http://localhost:5001/api/flagComment', data)
+            axios.patch('/api/flagComment', data)
                 .then(res => {
                     if (res.data) {
                         setRerender(true);
@@ -462,7 +462,7 @@ const Question = () => {
             questionId: questionId.questionId,
             answerUser: answerById
         }
-        axios.patch('http://localhost:5001/api/resolveQuestion', data)
+        axios.patch('/api/resolveQuestion', data)
             .then(res => {
                 if (res.data) {
                     setRerender(true);
@@ -480,7 +480,7 @@ const Question = () => {
             questionId: questionId.questionId,
             answerUser: answerById
         }
-        axios.patch('http://localhost:5001/api/unResolveQuestion', data)
+        axios.patch('/api/unResolveQuestion', data)
             .then(res => {
                 if (res.data) {
                     setRerender(true);

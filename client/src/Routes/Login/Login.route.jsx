@@ -71,7 +71,7 @@ const Login = () => {
             password: formValues['password'].trim(),
         }
 
-        axios.post('http://localhost:5001/api/loginuser', payload)
+        axios.post('/api/loginuser', payload)
             .then(res => {
                 navigate("/home")
                 setCurrentUser({ userId: res.data._id, username: res.data.username })

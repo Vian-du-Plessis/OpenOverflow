@@ -10,7 +10,6 @@ for the other input component please go to _____
 const Input = ({ id, label, ...otherprops }) => {
     return (
         <>
-
             <div className={styles.group}>
                 {
                     label &&
@@ -20,7 +19,6 @@ const Input = ({ id, label, ...otherprops }) => {
                 <input className={styles.formInput} {...otherprops}/>
             </div>
             <br />
-
         </>
     );
 };

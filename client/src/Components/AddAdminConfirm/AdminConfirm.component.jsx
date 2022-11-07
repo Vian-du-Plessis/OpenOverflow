@@ -15,8 +15,6 @@ const AdminConfirm = ({ name, email, something }) => {
 
     return (
         <div className={styles.modalContainer}>
-
-            
             <div className={styles.modalBody}>
                 <img src={regImg} />
                     <h3>Welcome, {name}</h3>
@@ -28,8 +26,6 @@ const AdminConfirm = ({ name, email, something }) => {
                
                 </div>
             </div>
-
-
         </div>
     );
 };

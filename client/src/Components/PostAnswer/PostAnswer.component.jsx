@@ -9,11 +9,7 @@ import Button from '../Button/Button.component'
 // import Icon from '../Icon/Icon';
 // import bold from "../../Assets/Icons/bold.png";
 
-
-
-
 const PostAnswer = ({ code, answer, handleClick, image,getImg, ...otherProps }) => {
-
     return (
         <div className={styles.container}>
 

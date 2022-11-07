@@ -26,7 +26,7 @@ const ValidateUser = () => {
 
   useEffect(() => {
     axios
-      .patch(`http://localhost:5001/api/validateUser/${searchParams.get("id")}`)
+      .patch(`/api/validateUser/${searchParams.get("id")}`)
       .then((res) => {
         console.log(res);
         if (res.status === 200) {

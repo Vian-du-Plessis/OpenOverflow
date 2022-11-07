@@ -21,7 +21,7 @@ const FollowedTags = () => {
        let user = sessionStorage.getItem("currentUser");
 
         if (user != null && validUser) {
-            axios.get(`http://localhost:5001/api/individualuser/${user}`)
+            axios.get(`/api/individualuser/${user}`)
             .then(res =>{
                 // console.log(res);
                 let data = res.data

@@ -19,7 +19,7 @@ const AdminRoute = () => {
     const [rerender, setRerender] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:5001/api/getflagged")
+        axios.get("/api/getflagged")
         .then((res) => {
             setFlagged(res.data);
             setBusy(false);
@@ -28,7 +28,7 @@ const AdminRoute = () => {
             console.log(err);
         });
 
-        axios.get("http://localhost:5001/api/getUnAnswered")
+        axios.get("/api/getUnAnswered")
         .then((res) => {
             setOld(res.data)
             console.log(res.data)
@@ -41,7 +41,7 @@ const AdminRoute = () => {
     }, [update, rerender]);
 
     const deleteComment = (commentId, questionId) => {
-        axios.patch(`http://localhost:5001/api/deleteComment/${commentId}/${questionId}`)
+        axios.patch(`/api/deleteComment/${commentId}/${questionId}`)
         .then(res =>{
             if(res.data) {
                 setRerender(true)
@@ -58,7 +58,7 @@ const AdminRoute = () => {
 
     const deleteQuestion = (e) => {
         console.log(e)
-        axios.patch(`http://localhost:5001/api/deleteQuestion/${e}`)
+        axios.patch(`/api/deleteQuestion/${e}`)
         .then(res =>{
             if(res.data) {
                 setRerender(true)

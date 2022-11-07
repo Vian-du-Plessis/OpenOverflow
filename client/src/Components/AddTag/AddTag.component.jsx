@@ -30,17 +30,14 @@ const AddTag = () => {
             name: formVals.tagName,
             description: formVals.tagDescription
         }
-        axios.post(`http://localhost:5001/api/addTag/`, payload)
-            .then(res => {
-                
-            })
-            .catch(err => {
-                console.log(err)
-            })
-
+        axios.post(`/api/addTag/`, payload)
+        .then(res => {
+            
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
-
-
 
     return (
         <div className={styles.container}>

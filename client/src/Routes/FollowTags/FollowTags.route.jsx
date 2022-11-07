@@ -32,7 +32,7 @@ const FollowTags = () => {
         if (validUser)
             return
 
-        axios.get('http://localhost:5001/api/getalltags')
+        axios.get('/api/getalltags')
             .then(res => {
                 setViewTags(res.data.map((i, index) => (<FollowableTags key={i._id} tag={<Tags title={i.name} />} desc={i.Description} />)))
             })
@@ -46,7 +46,7 @@ const FollowTags = () => {
         let payload = { ...currentUser.currentUser, followedTags: tags }
         console.log(payload)
 
-        axios.post('http://localhost:5001/api/registeruser', payload)
+        axios.post('/api/registeruser', payload)
             .then(res => {
                 console.log(payload)
                 console.log(res)

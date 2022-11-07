@@ -65,7 +65,7 @@ const ProfileContainer = ({image, user, year, score, questions, answers, badges,
             userImage: image
         }
 
-        axios.patch(`http://localhost:5001/api/edituser/${userId}`, payload)
+        axios.patch(`/api/edituser/${userId}`, payload)
             .then(res => {
                 setEditState(prev => !prev);
                 setCurrentUser(userId);
@@ -79,7 +79,7 @@ const ProfileContainer = ({image, user, year, score, questions, answers, badges,
     const [userAnswers, setUserAnswers] = useState([]);
     const [myBadges, setMyBadges] = useState([]);
     useEffect(() => {
-        axios.get(`http://localhost:5001/api/getUserQuestionsandAnswers/${userId}`)
+        axios.get(`/api/getUserQuestionsandAnswers/${userId}`)
         .then(res => {
             setUserQuestions(res.data.questions);
             setUserAnswers(res.data.answers);

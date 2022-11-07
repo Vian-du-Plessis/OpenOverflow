@@ -28,7 +28,7 @@ const AddArticle = () => {
             title: newValues.title,
             link: newValues.link
         }
-        axios.post(`http://localhost:5001/api/addarticles/${user}`, payload)
+        axios.post(`/api/addarticles/${user}`, payload)
         .then(res => {
             if(res.data) {
                 navigate('/articles');

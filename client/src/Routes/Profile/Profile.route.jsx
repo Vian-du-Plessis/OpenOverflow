@@ -24,7 +24,7 @@ import EditProfileImage from '../../Components/EditProfileImage/EditProfileImage
 import { RegisterContext } from '../../Contexts/Register.context';
 
 
-// http://localhost:5001/api/individualuser/:
+// /api/individualuser/:
 const Profile = () => {
     const profile = useParams()
     const [userInfo, setUserInfo] = useState()
@@ -51,7 +51,7 @@ const Profile = () => {
 
     // console.log(profile.userId)
     useEffect(() => {
-        axios.get(`http://localhost:5001/api/individualuser/${profile.userId}`)
+        axios.get(`/api/individualuser/${profile.userId}`)
             .then(res => {
                 setUserInfo(res.data);
                 setUserImage(res.data.userImage);

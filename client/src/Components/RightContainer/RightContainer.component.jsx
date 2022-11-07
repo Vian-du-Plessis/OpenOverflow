@@ -24,7 +24,7 @@ const RightContainer = ({ simliliar, topRated, questionid }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/api/gettoprated")
+      .get("/api/gettoprated")
       .then((res) => {
         let data = res.data;
         console.log(data);

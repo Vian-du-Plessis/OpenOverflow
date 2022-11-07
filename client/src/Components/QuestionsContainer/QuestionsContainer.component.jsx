@@ -17,7 +17,7 @@ const QuestionsContainer = () => {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:5001/api/questions')
+    axios.get('/api/questions')
       .then(res => {
         let data = res.data;
 /*         let today = new Date();

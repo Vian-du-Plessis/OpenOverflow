@@ -11,6 +11,9 @@ const app = express();
 const cors = require("cors");
 const PORT = process.env.PORT || 5001;
 const uri = process.env.DB_CONNECTION;
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, "client", "build")))
 //Next line is irrelevant, its just a test for something
 // const db = mongoose.connection.useDb('dbname')
 
@@ -26,6 +29,10 @@ app.use(articlesRouter);
 // connection
 mongoose.connect(uri, (err) => {
   err ? console.log("not connected to DB") : console.log("Connected to DB");
+});
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(PORT, () => {

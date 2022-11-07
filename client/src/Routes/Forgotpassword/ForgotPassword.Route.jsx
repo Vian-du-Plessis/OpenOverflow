@@ -47,7 +47,7 @@ const ForgotPassword = () => {
     const resetPassword = () => {
         let payload = { email: values.email }
 
-        axios.post('http://localhost:5001/api/resetpassword', payload)
+        axios.post('/api/resetpassword', payload)
             .then(res => {
                 console.log(payload)
                 console.log(res)

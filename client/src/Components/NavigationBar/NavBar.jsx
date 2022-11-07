@@ -34,7 +34,7 @@ const NavBar = () => {
     useEffect(() => {
         if(user == null || user == '') {
         } else {
-            axios.get('http://localhost:5001/api/questions')
+            axios.get('/api/questions')
             .then(res => {
                 let data = res.data
                 setSearchable(data)
@@ -43,7 +43,7 @@ const NavBar = () => {
                 console.log(err);
             });
 
-            axios.get(`http://localhost:5001/api/individualuser/${user}`)
+            axios.get(`/api/individualuser/${user}`)
             .then(res => {
                 setUserImage(res.data.userImage);
                 setBusy(false);

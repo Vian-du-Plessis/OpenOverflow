@@ -46,7 +46,7 @@ function App() {
         navigate('/')
       }
     } else {
-        axios.get("http://localhost:5001/api/auth/" + val)
+        axios.get("h/api/auth/" + val)
         .then((res) => {
             if (!res.data) {
             if (

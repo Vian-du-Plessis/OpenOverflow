@@ -19,7 +19,7 @@ const ArticlesContainer = () => {
 
     useEffect(() => {
         setUserId(sessionStorage.getItem('currentUser'))
-        axios.get('http://localhost:5001/api/getarticles')
+        axios.get('/api/getarticles')
             .then(res => {
                 setData(res.data)
                 setBusy(false)
@@ -44,7 +44,7 @@ const ArticlesContainer = () => {
                 list: newLikesList
             }
 
-            axios.patch('http://localhost:5001/api/likeArticle/down', data)
+            axios.patch('/api/likeArticle/down', data)
             .then(res => {
                 if(res.data) {
                     setRerender(true)
@@ -59,7 +59,7 @@ const ArticlesContainer = () => {
                 list: newLikesList
             }
 
-            axios.patch('http://localhost:5001/api/likeArticle/up', data)
+            axios.patch('/api/likeArticle/up', data)
             .then(res => {
                 if(res.data) {
                     setRerender(true)

@@ -38,7 +38,7 @@ const AskQuestion = () => {
     useEffect(() => {
 
         console.log(databaseImage)
-        axios.get('http://localhost:5001/api/getalltags')
+        axios.get('/api/getalltags')
             .then(res => {
                 setTags(res.data);
                 console.log(res);
@@ -122,7 +122,7 @@ const AskQuestion = () => {
                 tags: tagsSelected,
             }
 
-            axios.post('http://localhost:5001/api/askquestion', data)
+            axios.post('/api/askquestion', data)
             .then(res => {
                 console.log(res.data);
                 navigate(`/question/${res.data}`)
@@ -152,7 +152,7 @@ const AskQuestion = () => {
                 Images: newImage
             }
 
-            axios.post('http://localhost:5001/api/askquestion', data)
+            axios.post('/api/askquestion', data)
             .then(res => {
                 console.log(res);
                 console.log('gsgf')
