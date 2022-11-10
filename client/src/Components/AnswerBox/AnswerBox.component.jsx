@@ -62,7 +62,6 @@ const onChange = (e) => {
                 </div>
             </div>
 
-
             {
                 props.answerImage === "" || !props.answerImage
                 ?
